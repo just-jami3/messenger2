@@ -17,8 +17,10 @@
 		7D07D2992525D8FC00912EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D07D2972525D8FC00912EC1 /* LaunchScreen.storyboard */; };
 		7D07D2A42525D8FD00912EC1 /* MessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D07D2A32525D8FD00912EC1 /* MessengerTests.swift */; };
 		7D07D2AF2525D8FD00912EC1 /* MessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D07D2AE2525D8FD00912EC1 /* MessengerUITests.swift */; };
+		7D108EFC2530A85300E9529B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D108EFB2530A85300E9529B /* StorageManager.swift */; };
 		7D22364E252E169500D67F81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D22364D252E169500D67F81 /* GoogleService-Info.plist */; };
 		7D22367B252E6F8C00D67F81 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22367A252E6F8B00D67F81 /* DatabaseManager.swift */; };
+		7D22369D252F198D00D67F81 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22369C252F198D00D67F81 /* ChatViewController.swift */; };
 		7D6A06FF252BBAD7005B0EB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A06FE252BBAD7005B0EB8 /* LoginViewController.swift */; };
 		7D6A0704252BBAEF005B0EB8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A0703252BBAEF005B0EB8 /* RegisterViewController.swift */; };
 		7D6A0709252BBB19005B0EB8 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A0708252BBB19005B0EB8 /* PhotoViewerViewController.swift */; };
@@ -65,8 +67,10 @@
 		7D07D2AA2525D8FD00912EC1 /* MessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D07D2AE2525D8FD00912EC1 /* MessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITests.swift; sourceTree = "<group>"; };
 		7D07D2B02525D8FD00912EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D108EFB2530A85300E9529B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		7D22364D252E169500D67F81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D22367A252E6F8B00D67F81 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7D22369C252F198D00D67F81 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7D6A06FE252BBAD7005B0EB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7D6A0703252BBAEF005B0EB8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7D6A0708252BBB19005B0EB8 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				7D6A070D252BBB30005B0EB8 /* VedeoPlayerViewController.swift */,
 				7D6A0712252BBB53005B0EB8 /* NewConversationViewController.swift */,
 				7D6A0717252BBB69005B0EB8 /* ProfileViewController.swift */,
+				7D22369C252F198D00D67F81 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				7D07D28E2525D8F800912EC1 /* SceneDelegate.swift */,
 				7D6A0720252BC7DB005B0EB8 /* extentions.swift */,
 				7D22367A252E6F8B00D67F81 /* DatabaseManager.swift */,
+				7D108EFB2530A85300E9529B /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -495,11 +501,13 @@
 				7D6A0704252BBAEF005B0EB8 /* RegisterViewController.swift in Sources */,
 				7D6A0721252BC7DB005B0EB8 /* extentions.swift in Sources */,
 				7D6A0713252BBB53005B0EB8 /* NewConversationViewController.swift in Sources */,
+				7D108EFC2530A85300E9529B /* StorageManager.swift in Sources */,
 				7D07D2912525D8F800912EC1 /* ConversationsViewController.swift in Sources */,
 				7D07D28D2525D8F800912EC1 /* AppDelegate.swift in Sources */,
 				7D07D28F2525D8F800912EC1 /* SceneDelegate.swift in Sources */,
 				7D6A0718252BBB69005B0EB8 /* ProfileViewController.swift in Sources */,
 				7D6A0709252BBB19005B0EB8 /* PhotoViewerViewController.swift in Sources */,
+				7D22369D252F198D00D67F81 /* ChatViewController.swift in Sources */,
 				7D6A070E252BBB30005B0EB8 /* VedeoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
