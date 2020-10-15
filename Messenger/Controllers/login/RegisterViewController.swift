@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
         field.backgroundColor = .white
         return field
     }()
-    
+    //first name tb constructor
     private let firstNameField: UITextField = {
         let field = UITextField()
         field.autocapitalizationType = .none
@@ -63,7 +63,7 @@ class RegisterViewController: UIViewController {
         field.backgroundColor = .white
         return field
     }()
-    
+    //last name tb constructor
     private let lastNameField: UITextField = {
         let field = UITextField()
         field.autocapitalizationType = .none
@@ -109,13 +109,11 @@ class RegisterViewController: UIViewController {
         return button
     }()
     
-    
+    //main func
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
         self.view.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
                                                             style: .done,
                                                             target: self,
@@ -144,7 +142,7 @@ class RegisterViewController: UIViewController {
         
         imageView.addGestureRecognizer(gesture)
     }
-    
+    //opens action sheet when tapped on profile pic
     @objc private func didTapChangeProfilePic() {
         presentPhotoActionSheet()
     }
@@ -237,7 +235,7 @@ class RegisterViewController: UIViewController {
                                            emailAddress: email)
                 DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
                     if success {
-                        //upload image
+                        //upload profile pic to firebase
                         guard let image = strongSelf.imageView.image,
                               let data = image.pngData() else {
                             return
@@ -246,7 +244,7 @@ class RegisterViewController: UIViewController {
                         StorageManager.shared.uploadProfilePicture(with: data, fileName: filename, completion: { result in
                             switch result {
                             case .success(let downloadUrl):
-                                UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                UserDefaults.standard.set(downloadUrl, forKey: "")
                                 print(downloadUrl)
                             case .failure(let error):
                                 print("Storage manager error: \(error)")
@@ -263,8 +261,8 @@ class RegisterViewController: UIViewController {
         
     }
     
-    func alertUserLoginError(message: String = "please enter all info to register") {
-        let  alert = UIAlertController(title: "c'mon",
+    func alertUserLoginError(message: String = "please enter all correct info to register") {
+        let  alert = UIAlertController(title: "whoops",
                                        message: message,
                                        preferredStyle: .alert)
         alert.addAction (UIAlertAction(title:"Dissmiss",
@@ -272,7 +270,7 @@ class RegisterViewController: UIViewController {
         
         present(alert, animated: true)
     }
-    
+    // links create acc btn to next view controller
     @objc private func didTapRegister() {
         let vc = RegisterViewController()
         vc.title = "Create Account"
@@ -281,6 +279,7 @@ class RegisterViewController: UIViewController {
     
     
 }
+//lets the enter button carry you onto next feild
 extension RegisterViewController: UITextFieldDelegate {
     func UITextFieldShouldReturn( textFeild: UITextField) -> Bool {
         if textFeild == emailField {
@@ -292,6 +291,7 @@ extension RegisterViewController: UITextFieldDelegate {
         return true
     }
 }
+//profile pic selector
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func presentPhotoActionSheet(){
@@ -315,7 +315,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         present(actionSheet, animated: true)
         
     }
-    
+    //open camera to use as profile pic
     func presentCamera(){
         let vc = UIImagePickerController()
         vc.sourceType = .camera
@@ -323,7 +323,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         vc.allowsEditing = true
         present(vc, animated: true)
     }
-    
+    //open photos to use as profile pic
     func presentPhotoPicker(){
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -331,14 +331,15 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         vc.allowsEditing = true
         present(vc, animated: true)
     }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    //sets selected photo as new profile pic
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+           
             return
         }
         self.imageView.image = selectedImage
+
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {

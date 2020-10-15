@@ -72,12 +72,11 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    
+    //main func to run everything from
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
         self.view.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
                                                             style: .done,
@@ -156,13 +155,16 @@ class LoginViewController: UIViewController {
 
         
         let user = result.user
+            // saves the users email to easily quiery photo from firebase
+            UserDefaults.standard.set(email, forKey: "email")
+            
             print("user logged in: \(user)")
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
-    
+    //validation to check if all inputs are correct
     func alertUserLoginError() {
-        let  alert = UIAlertController(title: "c'mon",
+        let  alert = UIAlertController(title: "whoops",
                                        message: "please enter all info to log in",
                                        preferredStyle: .alert)
         alert.addAction (UIAlertAction(title:"Dissmiss",
@@ -170,7 +172,7 @@ class LoginViewController: UIViewController {
         
         present(alert, animated: true)
     }
-    
+    //links create acc button to registerviewcontroller
     @objc private func didTapRegister() {
         let vc = RegisterViewController()
         vc.title = "Create Account"
@@ -179,6 +181,7 @@ class LoginViewController: UIViewController {
     
     
 }
+//lets you skip to the next text box field by pressing done
 extension LoginViewController: UITextFieldDelegate {
     func UITextFieldShouldReturn( textFeild: UITextField) -> Bool {
         if textFeild == emailField {
