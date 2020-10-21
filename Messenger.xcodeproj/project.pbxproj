@@ -21,6 +21,7 @@
 		7D22364E252E169500D67F81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D22364D252E169500D67F81 /* GoogleService-Info.plist */; };
 		7D22367B252E6F8C00D67F81 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22367A252E6F8B00D67F81 /* DatabaseManager.swift */; };
 		7D22369D252F198D00D67F81 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22369C252F198D00D67F81 /* ChatViewController.swift */; };
+		7D59F6A3253DFF9C00AD0487 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59F6A2253DFF9C00AD0487 /* ConversationTableViewCell.swift */; };
 		7D6A06FF252BBAD7005B0EB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A06FE252BBAD7005B0EB8 /* LoginViewController.swift */; };
 		7D6A0704252BBAEF005B0EB8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A0703252BBAEF005B0EB8 /* RegisterViewController.swift */; };
 		7D6A0709252BBB19005B0EB8 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A0708252BBB19005B0EB8 /* PhotoViewerViewController.swift */; };
@@ -71,6 +72,7 @@
 		7D22364D252E169500D67F81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D22367A252E6F8B00D67F81 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7D22369C252F198D00D67F81 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7D59F6A2253DFF9C00AD0487 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		7D6A06FE252BBAD7005B0EB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7D6A0703252BBAEF005B0EB8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7D6A0708252BBB19005B0EB8 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				7D3486942525E0F100C0EB49 /* Storyboards */,
 				7D07D2952525D8FC00912EC1 /* Assets.xcassets */,
+				7D59F6A2253DFF9C00AD0487 /* ConversationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				7D07D28D2525D8F800912EC1 /* AppDelegate.swift in Sources */,
 				7D07D28F2525D8F800912EC1 /* SceneDelegate.swift in Sources */,
 				7D6A0718252BBB69005B0EB8 /* ProfileViewController.swift in Sources */,
+				7D59F6A3253DFF9C00AD0487 /* ConversationTableViewCell.swift in Sources */,
 				7D6A0709252BBB19005B0EB8 /* PhotoViewerViewController.swift in Sources */,
 				7D22369D252F198D00D67F81 /* ChatViewController.swift in Sources */,
 				7D6A070E252BBB30005B0EB8 /* VedeoPlayerViewController.swift in Sources */,
